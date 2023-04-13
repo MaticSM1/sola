@@ -1,0 +1,30 @@
+{
+  "neme": "neteowrite",
+  "version": "0.1",
+  "description": "neteowrite",
+  "main": "neteowrite.js",
+  "author": "Matic Sisko Musil",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-fileupload": "^1.3.1",
+    "express-http-proxy": "^1.6.3",
+    "express-session": "^1.17.2",
+    "localStorage": "^1.0.4",
+    "mongoose": "^6.0.4",
+    "node-fetch": "^2.6.1",
+    "node-libcurl": "^3.0.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "socket.io": "^4.2.0",
+    "websocket": "^1.0.34",
+    "ws": "^8.2.2"
+  }
+}

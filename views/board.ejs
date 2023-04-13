@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html> -->
+<html>
+
+<head>
+  <link rel="stylesheet" href="board.css">
+  <script type="text/javascript" src="board.js"></script>
+</head>
+
+<body>
+
+
+  <body onload="onLoad()">
+
+    <div class="bar">
+
+
+      <div style="padding-left: 20px; padding-top: 10px;">File &ensp; Save &ensp; Shortcuts</div>
+      <hr>
+      <button class="button" onclick="color('balck',this)" style="background-color:rgb(15, 14, 14);"></button>
+      <button class="button" onclick="color('blue',this)" style="background-color:rgb(47, 47, 255);"></button>
+      <button class="button" onclick="color('red',this)" style="background-color:rgb(203, 37, 37);"></button>
+      <button class="button" onclick="color('green',this)" style="background-color:rgb(38, 145, 47);"></button>
+      <button class="button" onclick="color('yellow',this)" style="background-color:rgb(214, 210, 6);"></button>
+      <button class="button" onclick="color('orange',this)" style="background-color:rgb(214, 89, 6);"></button>
+      <button class="button" onclick="color('white',this)" style="background-color:rgb(255, 255, 255);"></button>
+      <button class="button" onclick="color('pink',this)" style="background-color:rgb(227, 58, 179);"></button>
+
+
+
+
+
+
+      <button class="button" id="currentStatus" onclick="size(this)"
+        style="background-color:rgb(0, 0, 0); margin-left: 50px;"></button>
+
+      <button class="button" onclick="document.getElementById('file').click();"
+        style="background-color:rgb(217, 217, 217); background-image: url('/slikaIco.png'); margin-left: 20px;"></button>
+
+      <button class="button" onclick="pointerButtonToggle()" id="pointerButton"
+        style="background-color:rgb(217, 217, 217); background-image: url('/pointer.png'); margin-left: 5px;"></button>
+   
+        <button class="button" onclick="radirkaButtonToggle()" id="radirkaButton"
+        style="background-color:rgb(217, 217, 217); background-image: url('/radirka.png'); margin-left: 5px;"></button>
+
+
+
+
+    </div>
+
+    <canvas id="can" style="padding: 0px; margin: 0px; height: 100%; width: 100%;"></canvas>
+
+  </body>
+
+</html>
+
+
+<iframe name="dummyframe" id="dummyframe" style="display: none;" onload="dodajSliko()"></iframe>
+
+<form id="inputImageForm" method="POST" action="/nalozi?user=<%=id%>" enctype="multipart/form-data" target="dummyframe">
+  <input style="display: none;" class="file-upload-input" type="file" name="myFile" id="file"
+    onchange="javascript:updateList()" />
+</form>
+
+
+<!-- <input type="button" value="Browse..." onclick="document.getElementById('file').click();" /> -->

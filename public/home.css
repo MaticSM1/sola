@@ -1,0 +1,125 @@
+html {
+  height: 100%;
+}
+
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+  height: 100%;
+}
+
+button {
+  background-color: #0587d3;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.card {
+  color: white;
+  background-color: #0e1722;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+
+
+
+.container {
+  padding: 2px 16px;
+  height: 100px;
+}
+
+.gumbiSkupina {
+  padding-left: 5px;
+  text-align: right;
+}
+
+.boxleft{
+  cursor: pointer;
+
+  float: left;
+  height: 100%;
+  width: 40%;
+}
+
+.boxright{
+
+  float: left;
+  height: 100%;
+  width: 60%;
+  
+}
+
+.gumb{
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #0587d3;
+  padding: 0px;
+  margin-top: 4px;
+  width: 90px;
+  height: 90px;
+  
+  font-size: 50px;
+}
+
+
+.blure {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(4px) brightness(30%);
+  display: none;
+}
+
+
+.popUpOkvir {
+  position: absolute;
+  background-color: #1e3a4e;
+  height: auto;
+  width: 90%;
+  left: 5%;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  padding-bottom: 10vh;
+  display: none;
+}
+
+
+
+input {
+  width: 96%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+  margin-left: 2%;
+}

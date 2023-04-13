@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="Izberi alu uredi mapo">
+  <script type="text/javascript" src="home.js"></script>
+
+</head>
+
+<body>
+    <div class="blure" id="blure"></div>
+    <div style="height: 100%;" id="celiEkran">
+        <br><button onclick="location.href='/board?id=<%=rand%>'" style="margin-top:0px;"> NEW BOARD</button>
+
+        
+        <div class="popUpOkvir" id="popUp">
+            <span onclick="zapri()" style="cursor:pointer;padding: 2vh; font-size: 5vh; position: absolute; margin-top: 0px; top: 0px;  right: 0px; text-align: right;"><i class="fa fa-times"></i></span>
+
+        </div>
+
+
+        <% for(let i=0;i<boards.length;i++){ %>
+
+            <div class="card" >
+                <div class="container">
+
+                    <div class="boxleft" onclick=" location.href = ('/board?id=<%=boards[i][0] %>')">
+                        <h4><b>
+                                <%=boards[i][1] %>
+                            </b></h4>
+
+                            <% 
+                            let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                            let today  = new Date();
+                            let lepFormat = ""
+
+                            lepFormat = today.toLocaleDateString("de-DE")
+                             %>
+
+
+
+
+                        <p>Ustvarjeno: <%= lepFormat %></p>
+                    </div>
+
+                    <div class="boxright">
+                        <div class="gumbiSkupina">
+
+                        <div class="gumb">
+                            <i onclick="oredi( '<%=boards[i][1] %>', '<%=i%>')" class="fa fa-pencil" style="padding-top: 20px;"></i>
+                        </div>
+                  
+                        <div class="gumb">
+                            <i onclick="deli( '<%=boards[i][1] %>', '<%=i%>')" class="fa fa-users" style="padding-top: 20px;"></i>
+                        </div>
+
+                    </div>
+                    </div>
+
+                </div>
+            </div><br>
+
+
+            <% } %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <br>
+                <h1 style="margin:0px;">ODJAVA:</h1>
+                <br><button onclick="location.href='/logout'" style="margin:0px;">LOGOUT</button> -->
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=200, initial-scale=1.0" />
+  <link rel="stylesheet" href="form.css">
+
+</head>
+
+<h1> REGISTER
+  <div class="right">
+    <button type="button" class="cancelbtn" onclick="window.location.href='/'">🏠</button>
+  </div>
+</h1>
+
+
+<form action="/register" method="POST">
+  <div class="container">
+
+
+    <label for="name">Name</label>
+    <input type="name" name="name" placeholder="Name" value="<%= typeof name != 'undefined' ? name : '' %>" />
+
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Email" value="<%= typeof email != 'undefined' ? email : '' %>" />
+
+
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Password"
+      value="<%= typeof password != 'undefined' ? password : '' %>" />
+
+    <label for="password2">Confirm Password</label>
+    <input type="password" name="password2" placeholder="Confirm Password"
+      value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+
+    <button type="submit" class="btn btn-primary btn-block"> Register </button>
+
+
+
+    <div class="container" style="background-color:#f1f1f1">
+      <p>prijava:
+        <button type="button" class="cancelbtn" onclick="window.location.href='/users/login'">LOGIN</button>
+      </p>
+    </div>
+</form>
+
+</html>

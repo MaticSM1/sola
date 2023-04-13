@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<h1>matura projekt home</h1>
+
+
+<form action="/login" method="POST">
+  <div class="container">
+    <label for="email"><b>Email</b></label><br>
+    <input type="email" name="email" id="emailID" placeholder="Enter Email" />
+
+
+    <label for="password"><b>Password</b></label><br>
+    <input type="password" name="password" id="passwordID" placeholder="Enter Password" />
+
+    <input type="hidden" id="lastOpen" name="lastOpen" value="/home">
+    <input type="hidden" id="forceUrl" name="forceUrl" value="">
+
+
+
+    <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+
+
+    <div class="container" style="background-color:#f1f1f1">
+      <input type="checkbox" id="ostaniPrijavljen" name="ostaniPrijavljen" value="save">
+      <label for="ostaniPrijavljen"> ostani prijavljen</label><br>
+      <p>Ustvari racun:
+        <button type="button" class="cancelbtn" onclick="window.location.href='/registerPage'">REGISTER</button>
+      </p>
+    </div>
+</form>
+
+</html>
